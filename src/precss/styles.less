@@ -14,14 +14,14 @@ a {
   text-decoration: none;
 }
 
-#header, .admin-nav, #main-nav, .nav-links, .ncocials, .nsocials-currency, .content-block, .caption-section, .area-blocks  {
+#header, .contacts, .admin-nav, #main-nav, .nav-links, .ncocials, .nsocials-currency, .content-block, .caption-section, .area-blocks  {
   display: flex;
 }
 
 /*##### Header #####*/
 #header {
   background-color: @header-back-color;
-  .fillRowNoWrap(10px, 10px, 5px);
+  .fillRowNoWrap(0, 0, 5px);
   justify-content: space-between;
   font-size: 11px;
 }
@@ -46,6 +46,19 @@ a {
 .contacts, .admin-nav__link {
   color: @dark-grey-color;
 }
+
+.contacts {
+  align-items: center;
+}
+
+.admin-nav__link {
+  display: block;
+  padding: 10px 0;
+  &:hover {
+    font-weight: 600;
+    text-shadow: 0 0 5px @base-color;
+  }
+}
 /*##########*/
 
 /*#### Nav-links #####*/
@@ -67,6 +80,10 @@ a {
 .main-nav__link {
   margin-right: 25px;
   color: @dark-grey-color;
+  &:hover {
+    font-weight: 600;
+    text-shadow: 0 0 5px @base-color;
+  }
 }
 
 .logo-txt {
@@ -87,6 +104,10 @@ a {
   width: 34px;
   height: 34px;
   .centerChildLbl();
+  &:hover {
+    background-color: @base-color;
+    color: @white-color;
+  }
 }
 
 .nsocial-link__icon {
@@ -113,7 +134,7 @@ a {
 }
 
 .slider-top__content {
-  height: 690px; //temporary
+  height: 690px; //temporary;
 }
 /*##########*/
 
