@@ -1,0 +1,145 @@
+@import "reset.less";
+@import (reference) "vars.less";
+@import (reference) "funcs.less";
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  .fontParams('Roboto');
+}
+
+a {
+  text-decoration: none;
+}
+
+#main-nav, .nav-links, .ncocials, .nsocials-currency, .content-block, .caption-section {
+  display: flex;
+}
+
+#header {
+  background-color: @header-back-color;
+  .fillRowNoWrap(20px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.support {
+  height: 100px;
+  max-width: @max-width-content;
+  margin: 0 auto;
+  //border: 2px solid pink; //??
+}
+.area-wrapper {
+  height: 100px;
+  width: 100%;
+  //border: 2px solid green;
+  display: flex;
+}
+
+.area-block {
+  &:nth-child(1) {
+    .blockShape(~'calc(100% / 3 + 6px)', 100px, @base-color, 0, 50px, 0, 45px);
+  }
+  &:nth-child(2) {
+    .blockShape(~'calc(100% / 3 + 6px)', 100px, @black-color, 50px, 0, 45px, 45px);
+    margin: 0 -9px;
+  }
+  &:nth-child(3) {
+    .blockShape(~'calc(100% / 3 + 6px)', 100px, @base-color, 0, 50px, 45px, 0);
+  }
+}
+.contacts__icon {
+  .imgIcon(11px);
+}
+
+.content-block {
+  align-items: center;
+  color: @white-color;
+  justify-content: center;
+}
+
+.content-block__icon {
+  margin: 20px;
+}
+.content-block__caption {
+  .fontParams('Lato', sans-serif, 30px);
+  text-transform: uppercase;
+}
+
+.content-block__txt {
+  .fontParams('Lato');
+  text-transform: capitalize;
+}
+/*#########*/
+.nav-links {
+  justify-content: space-between;
+  .fillRowNoWrap(20px);
+}
+
+.nav-main {
+  display: flex;
+  align-items: center;
+  .fontParams('Playfair Display', serif, 18px);
+  font-style: italic;
+}
+
+.main-nav__item {
+  //width: 75px;;
+}
+
+.main-nav__link {
+  margin-right: 25px;
+}
+
+.logo-txt {
+  width: 200px;
+  height: 66px;
+}
+.nsocials-currency {
+  align-items: center;
+}
+
+.nsocial-link {
+  margin: 0 6px;
+}
+.nsocial-link__item {
+  border: 2px solid @base-color;
+  border-radius: 50%;
+  color: @base-color;
+  width: 34px;
+  height: 34px;
+  .centerChildLbl();
+}
+
+.nsocial-link__icon {
+
+}
+
+.currency {
+  margin-left : 50px;
+  text-transform: uppercase;
+  height: 34px;
+}
+/*############*/
+.caption-section {
+  align-items: center;
+}
+.caption-section__line {
+  border-top: 1px solid lightgrey;
+  width: 100%;
+  height: 0;
+}
+
+.caption-section__caption {
+  display: flex;
+  .fontParams('Playfair Display', serif, 30px, 600);
+  font-style: italic;
+  text-transform: capitalize;
+  width: 200px;
+  &:before, &:after {
+    content: url('../img/rectangle90deg.png');
+    margin: 0 50px;
+  }
+}
