@@ -18,6 +18,11 @@
     right: -50vw;
   }
 }
+.edgeOutContent(@hpad: 0, @tpad: 0, @bpad: @tpad, @width: @max-width-content) {
+  max-width: @width;
+  padding: @tpad @hpad @bpad;
+  margin: 0 auto;
+}
 
 .fontParams(@name, @type: sans-serif, @size: @font-size-default, @weight: normal) {
   font-family: @name, @type;
@@ -40,13 +45,32 @@
   }
 }
 
-.blockShape(@hSize, @heightContent, @colorBack, @borderTop: 0, @borderBottom: 0, @borderLeft: 0, @borderRight: 0) {
-  //.area-block {
+
+//.blockShape(@hSize, @heightContent, @colorBack, @borderTop: 0, @borderBottom: 0, @borderLeft: 0, @borderRight: 0) {
+.blockShape(@hSize, @heightContent, @colorBack, @borderTopBottom: none, @borderLeft: 0, @borderRight: 0) {
+  @heightBackBlock: @heightContent / 2;
   width: @hSize;
-  //}
+  position: relative;
+  /*# bTopBottomLbl - 1 - inside angle, >1 - outside angle, <1 - none*/
+  .bTopBot(@bTopBottomLbl) when (@bTopBottomLbl = 1) {
+    .area-block__btop {
+      border-top: @heightBackBlock solid;
+    }
+    .area-block__bbot {
+      border-bottom: @heightBackBlock solid;
+    }
+  }
+  .bTopBot(@bTopBottomLbl) when (@bTopBottomLbl > 1) {
+    .area-block__btop {
+      border-bottom: @heightBackBlock solid;
+    }
+    .area-block__bbot {
+      border-top: @heightBackBlock solid;
+    }
+  }
   .area-block__back {
     height: @heightContent;
-    width: @hSize;
+    width: 100%; //@hSize;
     // border: 1px solid yellow; //??
     // box-sizing: border-box; //??
     position: absolute;
@@ -60,14 +84,17 @@
     border-right: @borderRight solid transparent;
     //color: @colorBack;
   }
-  .area-block__btop {
+
+  //.bTopBot(@borderTopBottom, @heightContent / 2);
+  .bTopBot(@borderTopBottom);
+  /*  .area-block__btop {
     border-top: @borderTop solid;
     border-bottom: @borderBottom solid;
   }
   .area-block__bbot {
     border-top: @borderBottom solid;
     border-bottom: @borderTop solid;
-  }
+  }*/
   .content-block {
     height: @heightContent;
     width: 100%;//@hSize;

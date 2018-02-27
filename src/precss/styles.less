@@ -7,75 +7,51 @@ html {
 }
 
 body {
-  .fontParams('Roboto');
+  .fontParams('Lato');
 }
 
 a {
   text-decoration: none;
 }
 
-#main-nav, .nav-links, .ncocials, .nsocials-currency, .content-block, .caption-section {
+#header, .admin-nav, #main-nav, .nav-links, .ncocials, .nsocials-currency, .content-block, .caption-section, .area-blocks  {
   display: flex;
 }
 
+/*##### Header #####*/
 #header {
   background-color: @header-back-color;
-  .fillRowNoWrap(20px);
-  display: flex;
+  .fillRowNoWrap(10px, 10px, 5px);
   justify-content: space-between;
+  font-size: 11px;
 }
 
-.support {
-  height: 100px;
-  max-width: @max-width-content;
-  margin: 0 auto;
-  //border: 2px solid pink; //??
-}
-.area-wrapper {
-  height: 100px;
-  width: 100%;
-  //border: 2px solid green;
-  display: flex;
-}
-
-.area-block {
-  &:nth-child(1) {
-    .blockShape(~'calc(100% / 3 + 6px)', 100px, @base-color, 0, 50px, 0, 45px);
-  }
-  &:nth-child(2) {
-    .blockShape(~'calc(100% / 3 + 6px)', 100px, @black-color, 50px, 0, 45px, 45px);
-    margin: 0 -9px;
-  }
-  &:nth-child(3) {
-    .blockShape(~'calc(100% / 3 + 6px)', 100px, @base-color, 0, 50px, 45px, 0);
-  }
-}
 .contacts__icon {
-  .imgIcon(11px);
+  .imgIcon(11px, 11px, 18px);
 }
 
-.content-block {
-  align-items: center;
-  color: @white-color;
-  justify-content: center;
-}
-
-.content-block__icon {
-  margin: 20px;
-}
-.content-block__caption {
-  .fontParams('Lato', sans-serif, 30px);
+#nav-admin {
   text-transform: uppercase;
 }
 
-.content-block__txt {
-  .fontParams('Lato');
-  text-transform: capitalize;
+.admin-nav__item:not(:last-child) {
+   border-right: 1px solid lightgrey;
+   padding: 0 35px;
+ }
+
+.admin-nav__item:last-child {
+    padding-left: 35px;
 }
-/*#########*/
+
+.contacts, .admin-nav__link {
+  color: @dark-grey-color;
+}
+/*##########*/
+
+/*#### Nav-links #####*/
 .nav-links {
   justify-content: space-between;
-  .fillRowNoWrap(20px);
+  .edgeOutContent(@cantentOutPadGlobal, 20px);
 }
 
 .nav-main {
@@ -86,11 +62,11 @@ a {
 }
 
 .main-nav__item {
-  //width: 75px;;
 }
 
 .main-nav__link {
   margin-right: 25px;
+  color: @dark-grey-color;
 }
 
 .logo-txt {
@@ -122,13 +98,79 @@ a {
   text-transform: uppercase;
   height: 34px;
 }
-/*############*/
+/*##########*/
+
+/*#### Slider #####*/
+.slider {
+  .edgeOutContent(0, 20px, 20px, @max-width-viewport);;
+}
+
+.slider-top {
+  background-image: url(../img/slider1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider-top__content {
+  height: 690px; //temporary
+}
+/*##########*/
+
+/*##### Support #####*/
+.support {
+  height: 100px;
+  .edgeOutContent(@cantentOutPadGlobal, 20px);
+}
+
+.area-blocks {
+  height: @height-support-elements;
+  width: 100%;
+  display: flex;
+}
+
+.area-block {
+  &:nth-child(1) {
+    .blockShape(~'calc(100% / 3 + 6px)', @height-support-elements, @base-color, 2, 0, 45px);
+  }
+  &:nth-child(2) {
+    .blockShape(~'calc(100% / 3 + 6px)', @height-support-elements, @black-color, 1, 45px, 45px);
+    margin: 0 -9px;
+  }
+  &:nth-child(3) {
+    .blockShape(~'calc(100% / 3 + 6px)', @height-support-elements, @base-color, 2, 45px, 0);
+  }
+}
+
+.content-block {
+  align-items: center;
+  color: @white-color;
+  justify-content: center;
+}
+
+.content-block__icon {
+  margin: 20px;
+  font-size: 3em;
+}
+.content-block__caption {
+  .fontParams('Lato', sans-serif, 30px);
+  text-transform: uppercase;
+}
+
+.content-block__txt {
+  .fontParams('Lato');
+  text-transform: capitalize;
+}
+/*###########*/
+
+/*###### Caption section(s) #####*/
 .caption-section {
   align-items: center;
+  .edgeOutContent(5px, 20px);
 }
 .caption-section__line {
   border-top: 1px solid lightgrey;
-  width: 100%;
+  width: 40%;
   height: 0;
 }
 
@@ -136,10 +178,13 @@ a {
   display: flex;
   .fontParams('Playfair Display', serif, 30px, 600);
   font-style: italic;
-  text-transform: capitalize;
-  width: 200px;
+  text-transform: capitalize;;
+  width: 30%;
+  justify-content: space-around;
+  flex: 1 0 400px;
   &:before, &:after {
     content: url('../img/rectangle90deg.png');
-    margin: 0 50px;
+    margin: 0 15px;
   }
 }
+/*###########*/
