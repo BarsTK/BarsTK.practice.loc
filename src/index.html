@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
     <script defer src="./js/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/slick-carousel/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -36,7 +38,6 @@
                 </li>
             </ul>
         </nav>
-
     </header>
     <section class="nav-links">
         <nav class="nav-main">
@@ -55,7 +56,7 @@
                 </li>
             </ul>
         </nav>
-        <span class="brand">
+        <span class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" class="logo-txt" viewBox="0 0 300 99.3" role="presentation">
                 <use xlink:href="img/logo-txt.svg#logo-txt"></use>
             </svg>
@@ -84,26 +85,42 @@
                 </a>
             </div>
             <select name="currency" id="currency" class="currency">
-                <option class="currency__item">rupiah</option>
-                <option class="currency__item">usd</option>
-                <option class="currency__item">euro</option>
-                <option class="currency__item">yenah</option>
+                <option class="currency__item">Rupiah</option>
+                <option class="currency__item">USD</option>
+                <option class="currency__item">Euro</option>
+                <option class="currency__item">Yenah</option>
             </select>
         </div>
     </section>
     <section class="slider">
-        <div class="slider-top">
-            <img src="img/slider1.jpg" alt="collection" class="slider-top__img">
-            <div class="slider-top__content">
-                <div class="slider-top__content-info-out-border">
-                    <div class="slider-top__content-info">
-                        <p class="slider-top__content-info-season">MID-SEASON</p>
-                        <p class="slider-top__content-info-sale">SALE</p>
-                        <p class="slider-top__content-info-upto">UP TO</p>
-                        <p class="slider-top__content-info-size-sale">50 %   OFF</p>
+        <div class="slider-top-wrapper">
+            <div class="slider-top">
+                <img src="img/slider1.jpg" alt="collection" class="slider-top__img">
+                <div class="slider-top__content">
+                    <div class="slider-top__content-info-out-border">
+                        <div class="slider-top__content-info">
+                            <p class="slider-top__content-info-season">MID-SEASON</p>
+                            <p class="slider-top__content-info-sale">SALE</p>
+                            <p class="slider-top__content-info-upto">UP TO</p>
+                            <p class="slider-top__content-info-size-sale">50 %   OFF</p>
+                        </div>
                     </div>
+                    <button class="base-btn slider-top__btn">Shop now</button>
                 </div>
-                <a href="#" class="slider-top__btn">Shop now</a>
+            </div>
+            <div class="slider-top">
+                <img src="img/slider1.jpg" alt="collection" class="slider-top__img">
+                <div class="slider-top__content">
+                    <div class="slider-top__content-info-out-border">
+                        <div class="slider-top__content-info">
+                            <p class="slider-top__content-info-season">MID-SEASON</p>
+                            <p class="slider-top__content-info-sale">SALE</p>
+                            <p class="slider-top__content-info-upto">UP TO</p>
+                            <p class="slider-top__content-info-size-sale">50 %   OFF</p>
+                        </div>
+                    </div>
+                    <button class="base-btn slider-top__btn">Shop now</button>
+                </div>
             </div>
         </div>
     </section>
@@ -161,6 +178,53 @@
             <div class="caption-section__line"></div>
                 <div class="caption-section__caption">HandPicked</div>
             <div class="caption-section__line"></div>
+        </div>
+        <div class="grid-orders">
+            <div class="grid-orders__box">
+                <img src="img/top-product-1.png" alt="top-product" class="grid-order__img">
+                <div class="grid-orders__hover-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="plus" viewBox="0 0 100 100" role="presentation">
+                        <use xlink:href="img/plus.svg#plus"></use>
+                    </svg>
+                    <button class="base-btn grid-orders__btn">Shop now</button>
+                </div>
+            </div>
+            <div class="grid-orders__box pict-present">
+                <img src="img/top-product-2.png" alt="top-product" class="grid-order__img">
+                <div class="grid-orders__hover-box hover-box-present">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="plus" viewBox="0 0 100 100" role="presentation">
+                        <use xlink:href="img/plus.svg#plus"></use>
+                    </svg>
+                    <button class="base-btn grid-orders__btn">Shop now</button>
+                </div>
+            </div>
+            <div class="grid-orders__box">
+                <img src="img/top-product-3.png" alt="top-product" class="grid-order__img">
+                <div class="grid-orders__hover-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="plus" viewBox="0 0 100 100" role="presentation">
+                        <use xlink:href="img/plus.svg#plus"></use>
+                    </svg>
+                    <button class="base-btn grid-orders__btn">Shop now</button>
+                </div>
+            </div>
+            <div class="grid-orders__box">
+                <img src="img/top-product-4.png" alt="top-product" class="grid-order__img">
+                <div class="grid-orders__hover-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="plus" viewBox="0 0 100 100" role="presentation">
+                        <use xlink:href="img/plus.svg#plus"></use>
+                    </svg>
+                    <button class="base-btn grid-orders__btn">Shop now</button>
+                </div>
+            </div>
+            <div class="grid-orders__box">
+                <img src="img/top-product-5.png" alt="top-product" class="grid-order__img">
+                <div class="grid-orders__hover-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="plus" viewBox="0 0 100 100" role="presentation">
+                        <use xlink:href="img/plus.svg#plus"></use>
+                    </svg>
+                    <button class="base-btn grid-orders__btn">Shop now</button>
+                </div>
+            </div>
         </div>
     </section>
     <section class="recent">
@@ -314,5 +378,8 @@
         <section class="full-nav"></section>
         <section class="copyrigts"></section>
     </footer>
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/slick-carousel/slick/slick.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
