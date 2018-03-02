@@ -693,7 +693,7 @@ slick-prev {
   text-transform: capitalize;
   width: 35%;
   -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
+  //-ms-flex-pack: distribute;
   justify-content: space-around;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 400px;
