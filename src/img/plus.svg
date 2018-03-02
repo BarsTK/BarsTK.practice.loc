@@ -1,1 +1,1 @@
-<svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{stroke:#000;stroke-miterlimit:10;stroke-width:0.5px;}</style></defs><title>plus3</title><rect class="cls-1" x="49.5" y="1" width="1" height="98"/><rect class="cls-1" x="49.5" y="1" width="1" height="98" transform="translate(100) rotate(90)"/></svg>
+<svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path class="cls-1" d="M50 1v98M1 50h98"/></svg>

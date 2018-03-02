@@ -56,6 +56,28 @@
   line-height: 15px;;
 }
 
+/*It's not used*/
+.rombus-decor(@color: @base-color, @size: 10px) {
+  width: 0;
+  height: 0;
+  color: @color;
+  display: inline;
+  font-size: 0;
+  &::before, &::after {
+    content: '';
+    border-top: @size solid transparent;
+    border-bottom: @size solid transparent;
+    display: inline-block;
+  }
+  &::before {
+    border-right: @size;
+  }
+  &::after {
+    border-left: @size;
+  }
+}
+/**/
+
 .blockShape(@hSize, @heightContent, @colorBack, @borderTopBottom: none, @borderLeft: 0, @borderRight: 0) {
   @heightBackBlock: @heightContent / 2;
   width: @hSize;
