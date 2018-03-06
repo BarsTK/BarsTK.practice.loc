@@ -23,7 +23,8 @@
             <span class="contacts__text">Call +001 555 801</span>
         </div>
         <nav id="nav-admin">
-            <ul class="admin-nav">
+            <button class="nav-admin__btn menu-toggle-btn" title="Administrative menu">Welcome</button>
+            <ul id="admin-nav" class="admin-nav menu-toggle">
                 <li class="admin-nav__item">
                     <a href="#" class="admin-nav__link">Welcome msg!</a>
                 </li>
@@ -41,7 +42,8 @@
     </header>
     <div class="nav-links">
         <nav class="nav-main">
-            <ul id="main-nav">
+            <button class="nav-main__btn menu-toggle-btn" title="Navigate menu">Menu</button>
+            <ul class="main-nav menu-toggle">
                 <li class="main-nav__item">
                     <a href="#" class="main-nav__link">Home</a>
                 </li>
@@ -471,5 +473,6 @@
     <script src="libs/jquery/dist/jquery.js"></script>
     <script src="libs/slick-carousel/slick/slick.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
