@@ -64,26 +64,18 @@
             </svg>
         </span>
         <div class="nsocials-currency">
-            <div class="ncocials">
-                <a href="#" class="nsocial-link">
-                    <div class="nsocial-link__item">
+            <div class="nsocials">
+                <a href="#" class="nsocials__item-link nsocial-top">
                         <i class="fab fa-facebook-f nsocial-link__icon"></i>
-                    </div>
                 </a>
-                <a href="#" class="nsocial-link">
-                    <div class="nsocial-link__item">
+                <a href="#" class="nsocials__item-link nsocial-top">
                         <i class="fab fa-twitter nsocial-link__icon"></i>
-                    </div>
                 </a>
-                <a href="#" class="nsocial-link">
-                    <div class="nsocial-link__item">
+                <a href="#" class="nsocials__item-link nsocial-top">
                         <i class="fab fa-pinterest nsocial-link__icon"></i>
-                    </div>
                 </a>
-                <a href="#" class="nsocial-link">
-                    <div class="nsocial-link__item">
+                <a href="#" class="nsocials__item-link nsocial-top">
                         <i class="fab fa-instagram nsocial-link__icon"></i>
-                    </div>
                 </a>
             </div>
             <select name="currency" id="currency" class="currency" title="Select currency">
@@ -219,15 +211,6 @@
                     <button class="base-btn grid-orders__btn">Shop now</button>
                 </div>
             </div>
-            <div class="grid-orders__box pict-present">
-                <img src="img/top-product-2.png" alt="top-product" class="grid-order__img">
-                <div class="grid-orders__hover-box hover-box-present">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="plus" viewBox="0 0 100 100" role="presentation">
-                        <use xlink:href="img/plus.svg#plus"></use>
-                    </svg>
-                    <button class="base-btn grid-orders__btn">Shop now</button>
-                </div>
-            </div>
             <div class="grid-orders__box">
                 <img src="img/top-product-3.png" alt="top-product" class="grid-order__img">
                 <div class="grid-orders__hover-box">
@@ -237,6 +220,15 @@
                     <button class="base-btn grid-orders__btn">Shop now</button>
                 </div>
             </div>
+            <div class="grid-orders__box pict-present">
+            <img src="img/top-product-2.png" alt="top-product" class="grid-order__img">
+            <div class="grid-orders__hover-box hover-box-present">
+                <svg xmlns="http://www.w3.org/2000/svg" class="plus" viewBox="0 0 100 100" role="presentation">
+                    <use xlink:href="img/plus.svg#plus"></use>
+                </svg>
+                <button class="base-btn grid-orders__btn">Shop now</button>
+            </div>
+        </div>
             <div class="grid-orders__box">
                 <img src="img/top-product-4.png" alt="top-product" class="grid-order__img">
                 <div class="grid-orders__hover-box">
@@ -419,57 +411,182 @@
                 </div>
             </div>
             <div class="customers-feedbacks__item">
-                    <div class="customers-feedbacks__picture">
-                        <img src="img/customer-2.png" alt="customer picture" class="customers-feedbacks__img">
-                    </div>
-                    <div class="customers-feedbacks__info">
-                        <p class="customers-feedbacks-description">
-                            Sed ut perspiciatis<br>
-                            unde omnis iste natus error sit<br>
-                            voluptatem accusantium doloremque
-                        </p>
-                        <p class="customers-feedbacks__name">Shaheer Sheikh</p>
-                        <p class="customers-feedbacks__job-position">DESIGNER</p>
-                    </div>
+                <div class="customers-feedbacks__picture">
+                    <img src="img/customer-2.png" alt="customer picture" class="customers-feedbacks__img">
                 </div>
+                <div class="customers-feedbacks__info">
+                    <p class="customers-feedbacks-description">
+                        Sed ut perspiciatis<br>
+                        unde omnis iste natus error sit<br>
+                        voluptatem accusantium doloremque
+                    </p>
+                    <p class="customers-feedbacks__name">Shaheer Sheikh</p>
+                    <p class="customers-feedbacks__job-position">DESIGNER</p>
+                </div>
+            </div>
         </div>
     </section>
-    <div class="full-nav"></div>
     <footer id="footer">
-        <div class="full-nav"></div>
-        <div class="copyrigts">
-            <div class="copyright">
-                <small>&copy; 2015  Shopia  Fashion Store Shopify.</small>
-                <small>All Rights Reserved. Ecommerce Software by Shopify.</small>
-                <small>Designed by  MoccaLabs.com</small>
+        <div class="full-nav">
+            <div class="menus">
+                <div class="menus__menu">
+                    <h3 class="block-header">Shops</h3>
+                    <ul class="menus__menu-item">
+                        <li class="menus__item">
+                            <a href="#" class="menus__link">New In</a>
+                        </li>
+                        <li class="menus__item">
+                            <a href="#" class="menus__link">Women</a>
+                        </li>
+                        <li class="menus__item">
+                            <a href="#" class="menus__link">Men</a>
+                        </li>
+                        <li class="menus__item">
+                            <a href="#" class="menus__link">Shoes</a>
+                        </li>
+                        <li class="menus__item">
+                            <a href="#" class="menus__link">Bags & Accessories</a>
+                        </li>
+                        <li class="menus__item">
+                            <a href="#" class="menus__link">Top Brands</a>
+                        </li>
+                        <li class="menus__item">
+                            <a href="#" class="menus__link">Sale & Special Offers</a>
+                        </li>
+                        <li class="menus__item">
+                            <a href="#" class="menus__link">Lookbook</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menus__menu">
+                        <h3 class="block-header">Information</h3>
+                        <ul class="menus__menu-item">
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">About Us</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Customer Service</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">New Collection</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Best Sellers</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Manufacturers</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Privacy policy</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Terms & condition</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="menus__menu">
+                        <h3 class="block-header">Customer service</h3>
+                        <ul class="menus__menu-item">
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Search Terms</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Advanced Search</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Orders and Returns</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Contact Us</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">RSS</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Help & FAQs</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Consultant</a>
+                            </li>
+                            <li class="menus__item">
+                                <a href="#" class="menus__link">Store Locations</a>
+                            </li>
+                        </ul>
+                    </div>
             </div>
-            <div class="payment-cards">
-                <ul class="payment-cards__items">
-                    <li class="payment-cards__item">
-                        <a href="#" class="payment-cards__card-link">
-                            <i class="fab fa-cc-visa fa-lg payment-cards__img"></i>
-                        </a>
-                    </li>
-                    <li class="payment-cards__item">
-                        <a href="#" class="payment-cards__card-link">
-                            <i class="fab fa-cc-mastercard fa-lg payment-cards__img"></i>
-                        </a>
-                    </li>
-                    <li class="payment-cards__item">
-                        <a href="#" class="payment-cards__card-link">
-                            <i class="fab fa-cc-amex fa-lg payment-cards__img"></i>
-                        </a>
-                    </li>
-                    <li class="payment-cards__item">
-                        <a href="#" class="payment-cards__card-link">
-                            <i class="fab fa-cc-discover fa-lg payment-cards__img"></i>
-                        </a>
-                    </li>
-                </ul>
+            <div class="nsocials-subscribe">
+                <div class="nsocials-block">
+                    <h3 class="block-header">Stay connected</h3>
+                    <div class="nsocials">
+                    <a href="#" class="nsocials__item-link nsocial-bottom">
+                        <i class="fab fa-facebook-f nsocial-link__icon"></i>
+                    </a>
+                    <a href="#" class="nsocials__item-link nsocial-bottom">
+                        <i class="fab fa-twitter nsocial-link__icon"></i>
+                    </a>
+                    <a href="#" class="nsocials__item-link nsocial-bottom">
+                        <i class="fab fa-pinterest nsocial-link__icon"></i>
+                    </a>
+                    <a href="#" class="nsocials__item-link nsocial-bottom">
+                        <i class="fab fa-instagram nsocial-link__icon"></i>
+                    </a>
+                    <a href="#" class="nsocials__item-link nsocial-bottom">
+                        <i class="fas fa-rss nsocial-link__icon"></i>
+                    </a>
+                </div>
+                </div>
+                <div class="subscribe-block">
+                    <h3 class="block-header">Subscribe <i>in</i> our news letter</h3>
+                    <form action="#" class="subscribe">
+                        <input type="text" class="subscribe__field-input" placeholder="Enter your email address">
+                        <input type="submit" class="subscribe__btn" value="Subscribe">
+                    </form>
+                </div>
             </div>
+            <span class="hider"></span>
         </div>
+
+        <div class="copyrights">
+                <div class="copyright">
+                    <small>&copy; 2015  Shopia  Fashion Store Shopify.</small>
+                    <small>All Rights Reserved. Ecommerce Software by Shopify.</small>
+                    <small>Designed by  MoccaLabs.com</small>
+                </div>
+                <div class="payment-cards">
+                    <ul class="payment-cards__items">
+                        <li class="payment-cards__item">
+                            <a href="#" class="payment-cards__card-link">
+                                <i class="fab fa-cc-visa fa-lg payment-cards__img"></i>
+                            </a>
+                        </li>
+                        <li class="payment-cards__item">
+                            <a href="#" class="payment-cards__card-link">
+                                <i class="fab fa-cc-mastercard fa-lg payment-cards__img"></i>
+                            </a>
+                        </li>
+                        <li class="payment-cards__item">
+                            <a href="#" class="payment-cards__card-link">
+                                <i class="fab fa-cc-amex fa-lg payment-cards__img"></i>
+                            </a>
+                        </li>
+                        <li class="payment-cards__item">
+                            <a href="#" class="payment-cards__card-link">
+                                <i class="fab fa-cc-discover fa-lg payment-cards__img"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
     </footer>
     <div class="bottom"></div>
+    <div id="toTop">
+        <svg xmlns="http://www.w3.org/2000/svg" class="toTop-img" viewBox="0 0 50 50" role="presentation">
+            <use xlink:href="img/arrow-up.svg#arrow-up"></use>
+        </svg
+    ></div>
     <script src="libs/jquery/dist/jquery.js"></script>
     <script src="libs/slick-carousel/slick/slick.js"></script>
     <script src="js/slider.js"></script>
