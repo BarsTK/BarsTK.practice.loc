@@ -154,8 +154,7 @@ a {
 
 .nsocial-top {
   color: @base-color;
-  width: 32px;
-  height: 32px;
+  .WeqH(32px);
   margin: 0 8px;
   border-color: @base-color;
   &:hover {
@@ -237,9 +236,6 @@ a {
   .logo-txt {
     display: none;
   }
-/*  .nsocial-link {
-    margin: 0 3px;
-  }*/
 }
 /*##########*/
 
@@ -329,15 +325,10 @@ a {
   }
 }
 
-.slick-next, .slick-prev {
-  display: none;
-}
-
 .slick-dots {
   bottom: 4.3%;
   li button {
-    width: 13px;
-    height: 13px;
+    .WeqH(13px);
     background-color: @white-color;
     opacity: 0.5;
     transform: rotate(-45deg);
@@ -528,8 +519,7 @@ a {
 }
 
 .grid-order__img {
-  width: 100%;
-  height: 100%;
+  .WeqH(100%);
   object-fit: cover;
   vertical-align: middle;
 }
@@ -538,8 +528,7 @@ a {
   position: absolute;
   top: 5%;
   left: 5%;
-  width: 90%;
-  height: 90%;
+  .WeqH(90%);
   box-sizing: border-box;
   border: 3px solid @white-color;
   background-color: transparent;
@@ -667,8 +656,7 @@ a {
 }
 
 .recent-item__lbl {
-  width: @size-lbl;
-  height: @size-lbl;
+  .WeqH(@size-lbl);
   border-radius: 50%;
   position: absolute;
   left: 17px;
@@ -869,8 +857,7 @@ a {
 .nsocial-bottom {
   .centerChildLbl(22px);
   color: @footer-back-color;
-  width: 50px;
-  height: 50px;
+  .WeqH(50px);
   margin-right: 16px;
   border-color: @white-color;
   background-color: @white-color;
@@ -962,8 +949,7 @@ a {
 
 @media screen and (max-width: 370px) {
   .nsocial-bottom {
-    width: 30px;
-    height: 30px;
+    .WeqH(30px);
     .centerChildLbl(14px);
     margin-right: 10px;
   }
@@ -983,7 +969,7 @@ a {
 
 .payment-cards__item {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 25px;
 }
 
 .payment-cards__card-link:hover {
@@ -1008,10 +994,9 @@ a {
 /*###### ToTop button ######*/
 #toTop {
   position: fixed;
-  width: 40px;
-  height: 40px;
+  .WeqH(40px);
   background-color: rgba(0,0,0,0.7);
-  right: 117px;
+  right: 8%;
   bottom: 163px;
   border-radius: 4px;
 }
