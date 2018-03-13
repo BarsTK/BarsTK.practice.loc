@@ -2,6 +2,56 @@
 @import (reference) "vars.less";
 @import (reference) "funcs.less";
 
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'),
+  url('../fonts/lato-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/lato-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/lato-v14-latin-regular.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'),
+  url('../fonts/lato-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/lato-v14-latin-700.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/lato-v14-latin-700.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'),
+  url('../fonts/playfair-display-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/playfair-display-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/playfair-display-v13-latin-regular.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'),
+  url('../fonts/playfair-display-v13-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/playfair-display-v13-latin-italic.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/playfair-display-v13-latin-italic.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Playfair Display Bold Italic'), local('PlayfairDisplay-BoldItalic'),
+  url('../fonts/playfair-display-v13-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/playfair-display-v13-latin-700italic.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/playfair-display-v13-latin-700italic.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
 html {
   overflow-x: hidden;
 }
@@ -68,7 +118,7 @@ a {
 .admin-nav__link {
   display: block;
   &:hover {
-    font-weight: 600;
+    font-weight: 700;
     text-shadow: 0 0 5px @base-color;
   }
 }
@@ -101,7 +151,7 @@ a {
 }
 
 .nav-main, .nav-main__btn {
-  .fontParams('Playfair Display', serif, 18px);
+  .fontParams('Playfair Display', 18px);
   font-style: italic;
   color: @dark-grey-color;
 }
@@ -126,7 +176,7 @@ a {
   margin-right: 25px;
   color: @dark-grey-color;
   &:hover {
-    font-weight: 600;
+    font-weight: 700;
     text-shadow: 0 0 5px @base-color;
   }
 }
@@ -271,7 +321,7 @@ a {
 }
 
 .slider-top__content-info-season, .slider-top__content-info-sale, .slider-top__content-info-upto, .slider-top__content-info-size-sale {
-  font-weight: 600;
+  font-weight: 700;
 }
 .slider-top__content-info-season, .slider-top__content-info-upto {
   color: @white-color;
@@ -312,7 +362,7 @@ a {
   padding: 12px 15px;
   color: @white-color;
   background-color: @buttons-base-color;
-  .fontParams('Lato', sans-serif, 14.5px);
+  .fontParams('Lato', 14.5px);
   text-transform: uppercase;
 }
 
@@ -444,7 +494,7 @@ a {
   font-size: 3em;
 }
 .content-block__caption {
-  .fontParams('Lato', sans-serif, 30px);
+  .fontParams('Lato', 30px);
   text-transform: uppercase;
 }
 
@@ -581,7 +631,7 @@ a {
 }
 
 .caption-section__caption {
-  .fontParams('Playfair Display', serif, 30px, 600);
+  .fontParams('Playfair Display', 30px, 700);
   font-style: italic;
   text-transform: capitalize;
   width: 35%;
@@ -647,7 +697,7 @@ a {
   .recent-item__btn-txt {
     display: block;
     margin: 16px 0;
-    .fontParams('Lato', sans-serif, 14px);
+    .fontParams('Lato', 14px);
     text-transform: uppercase;
   }
   &:hover {
@@ -760,7 +810,7 @@ a {
 }
 
 .customers-feedbacks-description, .customers-feedbacks__name {
-  .fontParams('Playfair Display', serif, 14.1px);
+  .fontParams('Playfair Display', 14.1px);
   font-style: italic;
 }
 .customers-feedbacks-description {
@@ -774,14 +824,14 @@ a {
   font-size: 29.95px;
   color: inherit;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.6em;
 }
 
 .customers-feedbacks__job-position {
   color: @job-position-color;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 2.7em;
 }
 
@@ -838,7 +888,7 @@ a {
 
 .block-header {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   color: @white-color;
   padding: 48px 0;
@@ -873,7 +923,7 @@ a {
   .block-header {
     word-spacing: 6px;
     i {
-      .fontParams('Playfair Display', serif);
+      .fontParams('Playfair Display');
       text-transform: lowercase;
     }
   }
