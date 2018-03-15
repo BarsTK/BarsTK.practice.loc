@@ -1,6 +1,6 @@
 $(function() {
     $('.menu-toggle-btn').on('click', function() {
-        $(this).next().slideToggle(600, function() {
+        $(this).next().slideToggle(700, function() {
             const menu = $(this);
             if(menu.css('display') === 'none'){
                 menu.removeAttr('style');
@@ -33,4 +33,14 @@ $(function() {
             }
         }
     );
+});
+
+$(function() {
+    $('.menus .block-header').click(function() {
+        $(this).next().slideToggle(700, function () {
+            if ($(this).css('display') === 'none') {
+                $(this).removeAttr('style');
+            }
+        })
+    });
 });

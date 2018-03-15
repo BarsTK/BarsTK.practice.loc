@@ -491,7 +491,7 @@ a {
 }
 
 .content-block__icon {
-  margin: 20px;
+  margin: 10px;
   font-size: 3em;
 }
 .content-block__caption {
@@ -980,15 +980,25 @@ a {
 @media screen and (max-width: 465px) {
   .menus {
     flex-direction: column;
+    .block-header {
+      cursor: pointer;
+      &:hover {
+        color: @base-color;
+      }
+    }
+  }
+  .menus, .nsocials-block {
+    margin-bottom: 10px;
   }
   .block-header {
-    padding: 20px 0;
+    padding: 10px 0;
   }
   .menus__menu {
      padding: 0;
    }
   .menus__menu-item {
     font-size: 0;
+    display: none;
   }
   .menus__item {
     display: inline-block;
